@@ -26,17 +26,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .logo {
   font-weight: 600;
   color: #f29417;
   letter-spacing: 0.5px;
+  font-size: 1.8rem;
 }
 
 .logo a {
   text-decoration: none;
   color: inherit;
+}
+
+.intro {
+  margin-top: 40px;
 }
 
 /* Navigation */
@@ -97,6 +103,7 @@ p {
 
 .btn:hover {
   background: #57b97f;
+  color: #1f1f1f;
 }
 
 a {
