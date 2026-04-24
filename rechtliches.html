@@ -121,18 +121,52 @@
 
   <section id="kontakt">
     <h1>Kontakt</h1>
-    <p>Kontaktmöglichkeiten, Mailadresse etc.</p>
+    <p>
+    Hier findet ihr uns vor Ort.
+    </p>
+
+  <p style="font-size: 0.9rem; opacity: 0.8;">
+    Die Karte wird über OpenStreetMap bereitgestellt. Beim Anzeigen können Daten übertragen werden.
+  </p>
+
+  <button id="map-btn" class="btn" onclick="loadMap()">
+    Karte anzeigen
+  </button>
+
+  <div id="map-container" style="margin-top:20px;"></div>
   </section>
 
 </main>
   
 <script>
-  const burger = document.getElementById('burger');
-  const nav = document.getElementById('nav');
+/* ===== OpenStreetMap laden ===== */
+function loadMap() {
+  const container = document.getElementById('map-container');
+  const button = document.getElementById('map-btn');
 
+  if (!container) return;
+
+  container.innerHTML = `
+    <iframe 
+      src="https://www.openstreetmap.org/export/embed.html?bbox=12.721878,52.438880,12.741878,52.448880&layer=mapnik&marker=52.443880,12.731878"
+      style="border: 0; width: 100%; height: 400px;">
+    </iframe>
+  `;
+
+  if (button) {
+    button.style.display = 'none';
+  }
+}
+
+/* ===== Burger-Menü ===== */
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav');
+
+if (burger && nav) {
   burger.addEventListener('click', () => {
     nav.classList.toggle('open');
   });
+}
 </script>
   
 </body>
