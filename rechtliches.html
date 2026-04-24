@@ -11,12 +11,23 @@
 
 <header class="header">
   <div class="container header-inner">
+    
     <div class="logo">
       <a href="index.html">Bergstraße <span>EINS</span></a>
     </div>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">Start</a>
+      <a href="projekt.html">Projekt</a>
+      <a href="#">Gemeinschaft</a>
+      <a href="#">Mitmachen</a>
+    </nav>
+
+    <button class="burger" id="burger">☰</button>
+
   </div>
 </header>
-
+  
 <main class="container">
 
   <section id="impressum">
@@ -35,6 +46,15 @@
   </section>
 
 </main>
+  
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
 
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
+  
 </body>
 </html>
