@@ -34,6 +34,11 @@ body {
   letter-spacing: 0.5px;
 }
 
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Navigation */
 
 .nav {
@@ -82,10 +87,23 @@ p {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 16px;
-  background: #5f7d6a;
-  color: white;
+  background: #65cf91;
+  color: #1f1f1f;
   text-decoration: none;
   border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #57b97f;
+}
+
+a {
+  color: #65cf91;
+}
+
+a:hover {
+  color: #57b97f;
 }
 
 /* Desktop */
