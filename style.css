@@ -30,10 +30,15 @@ body {
 }
 
 .logo {
-  font-weight: 600;
+  font-weight: 400;
   color: #f29417;
   letter-spacing: 0.5px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+}
+
+.logo span {
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .logo a {
