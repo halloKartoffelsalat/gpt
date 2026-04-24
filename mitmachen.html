@@ -45,8 +45,13 @@
       Hier findet ihr unsere nächsten Treffen und Veranstaltungen.
     </p>
 
+      <p style="font-size: 0.9rem; opacity: 0.8;">
+      Der Kalender wird über Google bereitgestellt. Mehr dazu in unserer 
+      <a href="rechtliches.html#datenschutz">Datenschutzerklärung</a>.
+      </p>
+
     <button class="btn" onclick="loadCalendar()">
-      Kalender anzeigen
+      Google-Kalender anzeigen
     </button>
 
     <div id="calendar-container" style="margin-top:20px;"></div>
@@ -57,6 +62,7 @@
 <script>
 function loadCalendar() {
   const container = document.getElementById('calendar-container');
+  const button = document.querySelector('.btn');
 
   container.innerHTML = `
     <iframe 
@@ -64,8 +70,12 @@ function loadCalendar() {
       style="border: 0; width: 100%; height: 600px;">
     </iframe>
   `;
-}
 
+  if (button) {
+    button.style.display = 'none';
+  }
+} `
+    
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
 
