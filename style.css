@@ -1,1 +1,107 @@
+/* Basis */
 
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f6f4f1;
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+/* Container */
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+
+.header {
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+/* Navigation */
+
+.nav {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav.open {
+  display: flex;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+/* Burger */
+
+.burger {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 1.3rem;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* Button */
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #5f7d6a;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* Desktop */
+
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 900px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .burger {
+    display: none;
+  }
+
+}
