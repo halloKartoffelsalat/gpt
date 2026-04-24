@@ -160,4 +160,8 @@ a:hover {
   opacity: 1;
 }
 
+  #impressum p {
+  margin-bottom: 8px;
+}
+
 }
