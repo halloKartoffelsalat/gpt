@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bergstraße Eins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">Bergstraße Eins</div>
+
+    <nav class="nav" id="nav">
+      <a href="#">Start</a>
+      <a href="#">Projekt</a>
+      <a href="#">Gemeinschaft</a>
+      <a href="#">Mitmachen</a>
+    </nav>
+
+    <button class="burger" id="burger">☰</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="intro">
+    <h1>Gemeinsam leben. Anders wohnen.</h1>
+    <p>
+      Wir bauen ein Wohnprojekt für Menschen, die gemeinschaftlich,
+      nachhaltig und selbstbestimmt leben möchten.
+    </p>
+    <a href="#" class="btn">Mehr erfahren</a>
+  </section>
+
+  <section>
+    <h2>Was wir vorhaben</h2>
+    <p>
+      Wir möchten auf einem alten Hof gemeinschaftlichen Wohnraum schaffen.
+      Schritt für Schritt entsteht ein Ort, der Natur, Gemeinschaft und
+      Selbstbestimmung verbindet.
+    </p>
+  </section>
+
+  <section>
+    <h2>Wo wir stehen</h2>
+    <p>
+      Wir sind noch im Aufbau. Einige Gebäude sind Baustelle,
+      vieles ist im Werden. Gleichzeitig wächst die Idee und die Gruppe.
+    </p>
+  </section>
+
+  <section>
+    <h2>Wen wir suchen</h2>
+    <ul>
+      <li>Menschen mit Lust auf Gemeinschaft</li>
+      <li>Pragmatische Macher</li>
+      <li>Interesse an nachhaltigem Leben</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Kontakt</h2>
+    <p>Habt ihr Interesse? Meldet euch gern.</p>
+    <a href="#" class="btn">Kontakt aufnehmen</a>
+  </section>
+
+</main>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
