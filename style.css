@@ -234,3 +234,20 @@ a:hover {
     text-align: left;
   }
 }
+
+/* Zitate */
+.quote {
+  margin-top: 40px;
+  padding-left: 20px;
+  border-left: 3px solid #65cf91;
+}
+
+.quote p {
+  margin: 0;
+}
+
+.quote-author {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
