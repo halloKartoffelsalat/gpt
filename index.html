@@ -9,73 +9,65 @@
 
 <body>
 
+<!-- Header wird geladen -->
 <div id="header"></div>
 
 <main class="container">
 
   <section class="intro">
     <h1>Gemeinsam leben. Anders wohnen.</h1>
-    <p>
-      Wir bauen ein Wohnprojekt für Menschen, die gemeinschaftlich,
-      nachhaltig und selbstbestimmt leben möchten.
-    </p>
-    <a href="#" class="btn">Mehr erfahren</a>
-  </section>
 
-  <section>
-    <h2>Was wir vorhaben</h2>
     <p>
-      Wir möchten auf einem alten Hof gemeinschaftlichen Wohnraum schaffen.
-      Schritt für Schritt entsteht ein Ort, der Natur, Gemeinschaft und
-      Selbstbestimmung verbindet.
+      Im idyllischen Dorf Götzer Berge westlich von Potsdam und östlich von Brandenburg an der Havel entsteht ein ökologisches und selbst verwaltetes Wohnprojekt mit 15 individuellen Wohneinheiten, zusätzlichen Gemeinschaftsräumen, großem Gemeinschaftsgarten und viel Gestaltungsraum für alle Generationen. Es handelt sich um ein Bestandsgebäude aus den 70er Jahren, das nach ökologischen und modernen energetischen Standards kernsaniert und umgebaut wird.
     </p>
-  </section>
 
-  <section>
-    <h2>Wo wir stehen</h2>
-    <p>
-      Wir sind noch im Aufbau. Einige Gebäude sind Baustelle,
-      vieles ist im Werden. Gleichzeitig wächst die Idee und die Gruppe.
-    </p>
-  </section>
-
-  <section>
-    <h2>Wen wir suchen</h2>
+    <p><strong>Eckdaten:</strong></p>
     <ul>
-      <li>Menschen mit Lust auf Gemeinschaft</li>
-      <li>Pragmatische Macher</li>
-      <li>Interesse an nachhaltigem Leben</li>
+      <li>Einzug ist Ende 2027 geplant</li>
+      <li>Generationenübergreifendes, genossenschaftliches Wohnen</li>
+      <li>Wohnprojektgröße: ca. 25 Erwachsene plus Kinder</li>
+      <li>Leben auf dem Land</li>
     </ul>
-  </section>
 
-  <section class="contact">
-    <h2>Kontakt</h2>
-    <p>Habt ihr Interesse? Meldet euch gern.</p>
-    <a href="#" class="btn">Kontakt aufnehmen</a>
+    <div class="intro-buttons">
+
+      <div class="intro-item">
+        <a href="gemeinschaft.html" class="btn">Die Gemeinschaft</a>
+        <p>Wer steckt hinter dem Projekt? Hier lernst Du die Menschen kennen, die für das Projekt brennen.</p>
+      </div>
+
+      <div class="intro-item">
+        <a href="haus.html" class="btn">Das Haus</a>
+        <p>Hier präsentieren wir, wie wir zukünftig wohnen wollen, sowie Ort und Umfeld des Geschehens.</p>
+      </div>
+
+      <div class="intro-item">
+        <a href="projekt.html" class="btn">Das Projekt</a>
+        <p>Wie funktioniert eigentlich eine Baugenossenschaft? Wie arbeiten wir im Projekt? Wie wollen wir Nachbarschaft leben? Und wie verwandeln wir unsere Vision in die Realität?</p>
+      </div>
+
+      <div class="intro-item">
+        <a href="mitmachen.html" class="btn">Mitmachen</a>
+        <p>Interesse geweckt? Dann melde dich gern zu einem unserer Infoabende an. Hier informieren wir zudem fortlaufend über anstehende Termine.</p>
+      </div>
+
+    </div>
+
   </section>
 
 </main>
 
+<!-- Footer wird geladen -->
+<div id="footer"></div>
+
 <script>
-  const burger = document.getElementById('burger');
-  const nav = document.getElementById('nav');
-
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-</script>
-
-  <div id="footer"></div>
-  
-   
-  <script>
 function loadHTML(id, file) {
   fetch(file)
     .then(response => response.text())
     .then(data => {
       document.getElementById(id).innerHTML = data;
 
-      // Burger-Menü erst nach Laden aktivieren
+      // Burger-Menü aktivieren (nachdem Header geladen ist)
       if (id === "header") {
         const burger = document.getElementById('burger');
         const nav = document.getElementById('nav');
@@ -93,7 +85,6 @@ function loadHTML(id, file) {
 loadHTML("header", "header.html");
 loadHTML("footer", "footer.html");
 </script>
-  
-  
+
 </body>
 </html>
