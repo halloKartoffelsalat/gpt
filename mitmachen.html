@@ -68,26 +68,28 @@ burger.addEventListener('click', () => {
 </script>
  <div id="footer"></div>
 
-  <script>
+ <script>
 function loadHTML(id, file) {
   fetch(file)
     .then(response => response.text())
     .then(data => {
       document.getElementById(id).innerHTML = data;
 
-      // Burger-Menü nachladen (weil Header dynamisch ist)
-      const burger = document.getElementById('burger');
-      const nav = document.getElementById('nav');
+      // Burger-Menü erst nach Laden aktivieren
+      if (id === "header") {
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
 
-      if (burger && nav) {
-        burger.addEventListener('click', () => {
-          nav.classList.toggle('open');
-        });
+        if (burger && nav) {
+          burger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+          });
+        }
       }
     });
 }
 
-// Header und Footer laden
+// Header & Footer laden
 loadHTML("header", "header.html");
 loadHTML("footer", "footer.html");
 </script>
