@@ -170,31 +170,38 @@ a:hover {
 /* Startseite Erweiterungen  */
 /* ========================= */
 
+/* Startseite: saubere Struktur */
+
 .intro-buttons {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 .intro-item {
-  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Text leicht kompakter */
 .intro-item p {
   margin-top: 8px;
   font-size: 0.95rem;
   opacity: 0.85;
+  max-width: 480px;
 }
 
+/* Desktop */
 @media (min-width: 768px) {
   .intro-buttons {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
   }
 
   .intro-item {
-    width: calc(50% - 15px);
+    width: calc(50% - 20px);
   }
 }
