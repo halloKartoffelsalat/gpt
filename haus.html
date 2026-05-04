@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TITEL – Bergstraße Eins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Header wird geladen -->
+<div id="header"></div>
+
+<main class="container">
+
+  <!-- Inhalt kommt später -->
+  <section class="intro">
+    <h1>TITEL</h1>
+    <p>Inhalt folgt.</p>
+  </section>
+
+</main>
+
+<!-- Footer wird geladen -->
+<div id="footer"></div>
+
+<script>
+function loadHTML(id, file) {
+  fetch(file)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(id).innerHTML = data;
+
+      if (id === "header") {
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
+
+        if (burger && nav) {
+          burger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+          });
+        }
+      }
+    });
+}
+
+loadHTML("header", "header.html");
+loadHTML("footer", "footer.html");
+</script>
+
+</body>
+</html>
