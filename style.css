@@ -242,12 +242,13 @@ a:hover {
   border-left: 3px solid #65cf91;
 }
 
-.quote p {
-  margin: 0;
+.quote p:first-child {
+  font-style: italic;
 }
 
 .quote-author {
   margin-top: 10px;
   font-size: 0.9rem;
   opacity: 0.7;
+  font-style: normal;
 }
