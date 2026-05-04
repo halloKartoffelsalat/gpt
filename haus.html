@@ -3,94 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TITEL – Bergstraße Eins</title>
+  <title>Das Haus – Bergstraße Eins</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Header wird geladen -->
 <div id="header"></div>
 
 <main class="container">
 
-  <!-- Inhalt kommt später -->
-  <section class="intro">
-    <h1>Das Haus</h1>
+<h1>Das Haus</h1>
 
 <h2>Die Vision</h2>
 <p>
-  Das Bestandsgebäude stammt aus den 1970er Jahren und wurde ursprünglich als Betonplattenbau errichtet. Es steht seit 30 Jahren leer und soll zunächst vollständig kernsaniert und nach heutigen bauökologischen und energetischen Standards ausgerüstet werden.
+Das Bestandsgebäude stammt aus den 1970er Jahren und wurde ursprünglich als Betonplattenbau errichtet. Es steht seit 30 Jahren leer und soll zunächst vollständig kernsaniert und nach heutigen bauökologischen und energetischen Standards ausgerüstet werden.
 </p>
 <p>
-  Im Rahmen des Umbaus werden unter anderem die vollständige Nord- und Südfassade des Hauses (die langen Seiten) komplett erneuert und mit einem Laubengang und Balkonen versehen. Im Rahmen des Innenausbaus werden dann 15 individuelle Wohneinheiten in Größen von 40 – 100 qm errichtet.
+Im Rahmen des Umbaus werden unter anderem die vollständige Nord- und Südfassade des Hauses (die langen Seiten) komplett erneuert und mit einem Laubengang und Balkonen versehen. Im Rahmen des Innenausbaus werden dann 15 individuelle Wohneinheiten in Größen von 40 – 100 qm errichtet.
 </p>
 <p>
-  Die heutige Empfangshalle im Erdgeschoss und der große Seminarraum im ersten Obergeschoß werden zu großen Gemeinschaftsflächen umgewandelt. Hier entstehen Räume für Begegnungen, Veranstaltungen und ein getrennter Coworking Space.
+Die heutige Empfangshalle im Erdgeschoss und der große Seminarraum im ersten Obergeschoß werden zu großen Gemeinschaftsflächen umgewandelt. Hier entstehen Räume für Begegnungen, Veranstaltungen und ein getrennter Coworking Space.
 </p>
 <p>
-  Der umliegende Gemeinschaftsgarten wird von den Mitgliedern in Eigenleistung konzeptioniert und gemeinsam gestaltet. Das Haus grenzt direkt an die bereits teilsanierte historische Villa eines Ziegeleibesitzers, welche sich heute im Besitz der Landwerk Götzer Berge gGmbH befindet.
+Der umliegende Gemeinschaftsgarten wird von den Mitgliedern in Eigenleistung konzeptioniert und gemeinsam gestaltet. Das Haus grenzt direkt an die bereits teilsanierte historische Villa eines Ziegeleibesitzers.
 </p>
 <p>
-  Der Baustart wird für Mitte 2026 anvisiert, der Einzug ist dann gegen Ende 2027 geplant.
+Der Baustart wird für Mitte 2026 anvisiert, der Einzug ist dann gegen Ende 2027 geplant.
 </p>
-
 
 <h2>Der Standort</h2>
 <p>
-  Das Haus liegt im Dorf Götzer Berge in der Bergstraße. Dabei handelt es sich um eine Sackgasse ohne Durchgangsverkehr. Die Straße wird fast ausschließlich von den Anwohnern und gelegentlichen Radtouristen befahren. Immerhin führt der Europaradweg direkt durchs Dorf.
+Das Haus liegt im Dorf Götzer Berge in der Bergstraße. Dabei handelt es sich um eine Sackgasse ohne Durchgangsverkehr. Die Straße wird fast ausschließlich von den Anwohnern und gelegentlichen Radtouristen befahren.
 </p>
+
+<!-- ===== Karte ===== -->
+<p style="font-size: 0.9rem; opacity: 0.8;">
+Die Karte wird über OpenStreetMap bereitgestellt. Beim Anzeigen können Daten übertragen werden.
+</p>
+
+<button id="map-btn" class="btn" onclick="loadMap()">
+Karte anzeigen
+</button>
+
+<div id="map-container" style="margin-top:20px;"></div>
 
 <p>
-  Die Lage ist ausgesprochen ruhig. Überregional bekannt ist der nahegelegene Rosenwaldhof – ein Seminarhaus und Ort der Stille. Mit dem Hof Birnbaum und dem Naturheilcamp Götzer Berge gibt es zudem weitere Übernachtungsmöglichkeiten für Erholungssuchende.
+Immerhin führt der Europaradweg direkt durchs Dorf. Die Lage ist ausgesprochen ruhig. Überregional bekannt ist der nahegelegene Rosenwaldhof – ein Seminarhaus und Ort der Stille.
 </p>
-
 
 <h2>Die Umgebung: Wiesen, Wald und Wasser</h2>
 <p>
-  Das Dorf Götzer Berge gehört mit dem in rund 3 km Entfernung gelegenen Dorf Götz zur Gemeinde Groß Kreutz. Die Landschaft ist geprägt durch Wälder und Wiesen, die Nähe zur Havel und zu den Deetzer Erdlöchern (Angel- und Badeteiche).
+Das Dorf Götzer Berge gehört mit dem in rund 3 km Entfernung gelegenen Dorf Götz zur Gemeinde Groß Kreutz. Die Landschaft ist geprägt durch Wälder und Wiesen sowie die Nähe zur Havel.
 </p>
-<p>
-  Auf dem höchsten Hügel von Götzer Berge (108,6 m über NHN) bildet ein 42 m hoher Aussichtsturm eine Landmarke und ein beliebtes Ausflugsziel. Bei besagtem Hügel handelt es sich übrigens um die höchste natürliche Erhebung Brandenburgs.
-</p>
-<p>
-  Der Blick in die Ferne und die Umgebung über den Wipfeln der Bäume ist atemberaubend. Man sieht die Erdlöcher, die Havel, Brandenburg, Potsdam und in der Ferne bei guter Sicht sogar Berlin.
-</p>
-
 
 <h2>Mobilität</h2>
 <p>
-  Bis zum Bahnhof Götz sind es 5 km, dort hält der R1 im Stundentakt. Nach einer Verlängerung des Bahnsteiges hält der Zug voraussichtlich ab 2029 im 20-Minuten-Takt. Wir planen ein Mobilitätskonzept mit regelmäßigen Anfahrten zum Bahnhof.
+Bis zum Bahnhof Götz sind es 5 km, dort hält der R1 im Stundentakt. Nach einer Verlängerung hält der Zug voraussichtlich ab 2029 im 20-Minuten-Takt.
 </p>
-
 
 <h2>Kitas und Schulen</h2>
 <p>
-  Im Dorf Götz gibt es einen Kindergarten. In Jeserig (7 km entfernt) gibt es eine Grundschule mit 270 Kindern und Ganztagesangebot. In Werder gibt es eine Waldorfschule.
+Im Dorf Götz gibt es einen Kindergarten. In Jeserig gibt es eine Grundschule mit Ganztagesangebot. Weitere Schulen gibt es in Brandenburg, Potsdam und Kloster Lehnin.
 </p>
-<p>
-  Weitere Schulen gibt es in den Städten Brandenburg, Potsdam und in Kloster Lehnin (freie Schule). Im Dorf selbst verkehrt regelmäßig ein Schulbus, der die Kinder zu ihren Bildungseinrichtungen bringt.
-</p>
-
 
 <h2>Die Historie</h2>
 <p>
-  Das Dorf Götzer Berge entstand im Zuge der Tongewinnung. Die Ziegeleien lockten im 19. Jahrhundert Arbeiter an, die sich im Dorf niederließen. Von vergangenem Reichtum zeugt bis heute die ehemalige Ziegeleibesitzer-Villa des Hauptmanns Daude, um 1880 gebaut und mit Landschaftspark, Wasserturm und Grotte ausgestattet.
+Das Dorf entstand im Zuge der Tongewinnung. Ziegeleien lockten im 19. Jahrhundert Arbeiter an. Nach dem Zweiten Weltkrieg wurde die Produktion eingestellt.
 </p>
 <p>
-  Nach dem 2. Weltkrieg nahm die Ziegelproduktion aufgrund von Rohstoffmangel, schwieriger Abbaubedingungen und geringer abbaubarer Vorräte kontinuierlich ab. 1954 wurde die Ziegelproduktion endgültig eingestellt. Danach ging das Areal in den Volkseigenen Betrieb VEB Kraftverkehr über und es entstand ein Kinderferienlager.
+Später entstand ein Kinderferienlager und in den 1970er Jahren ein FDGB-Erholungsheim. Das Gelände wird heute schrittweise wiederbelebt.
 </p>
-<p>
-  In den 1970er Jahren wurde die Villa in ein Schulungs- und Erholungsheim des FDGB umgebaut. Es entstand der Anbau, der heute unser Wohnprojekt bildet: ein Zwischenbau mit Glasfront und Eingangshalle sowie das dreigeschossige Bettenhaus mit Seminarraum.
-</p>
-<p>
-  Bis 1995 wurde das Gewerkschaftsobjekt noch regelmäßig genutzt und ging dann in den Besitz der Landwerk gGmbH über. Die Villa wurde seither renoviert, das Bettenhaus mit Landschaftspark und Wasserturm versank in den Dornröschenschlaf, ist aber noch gut erhalten.
-</p>
-  </section>
 
 </main>
 
-<!-- Footer wird geladen -->
 <div id="footer"></div>
 
 <script>
@@ -113,6 +99,26 @@ function loadHTML(id, file) {
     });
 }
 
+/* ===== Karte ===== */
+function loadMap() {
+  const container = document.getElementById('map-container');
+  const button = document.getElementById('map-btn');
+
+  if (!container) return;
+
+  container.innerHTML = `
+    <iframe 
+      src="https://www.openstreetmap.org/export/embed.html?bbox=12.721878,52.438880,12.741878,52.448880&layer=mapnik&marker=52.443880,12.731878"
+      style="border:0; width:100%; height:400px;">
+    </iframe>
+  `;
+
+  if (button) {
+    button.style.display = 'none';
+  }
+}
+
+/* Header/Footer */
 loadHTML("header", "header.html");
 loadHTML("footer", "footer.html");
 </script>
