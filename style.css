@@ -170,7 +170,6 @@ a:hover {
 /* Startseite Erweiterungen  */
 /* ========================= */
 
-/* Startseite: saubere Struktur */
 
 .intro-buttons {
   margin-top: 30px;
@@ -191,6 +190,13 @@ a:hover {
   font-size: 0.95rem;
   opacity: 0.85;
   max-width: 480px;
+}
+
+.intro-item .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
 }
 
 /* Desktop */
