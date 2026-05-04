@@ -211,3 +211,26 @@ a:hover {
     width: calc(50% - 20px);
   }
 }
+
+/* buttons mobil zentrieren */
+@media (max-width: 767px) {
+  .intro-item {
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-item .btn {
+    width: 220px;
+  }
+}
+
+/* text mobil im blocksatz */
+@media (max-width: 767px) {
+  p {
+    text-align: justify;
+  }
+
+  li {
+    text-align: left;
+  }
+}
