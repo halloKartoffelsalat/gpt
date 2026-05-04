@@ -165,3 +165,36 @@ a:hover {
 }
 
 }
+
+/* ========================= */
+/* Startseite Erweiterungen  */
+/* ========================= */
+
+.intro-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-item {
+  max-width: 500px;
+}
+
+.intro-item p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+@media (min-width: 768px) {
+  .intro-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .intro-item {
+    width: calc(50% - 15px);
+  }
+}
