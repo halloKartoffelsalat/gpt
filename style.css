@@ -272,21 +272,17 @@ a:hover {
 ========================= */
 
 .page-banner {
-  position: relative;
   width: 100%;
-  height: 480px;
-  overflow: hidden;
 }
 
 .page-banner picture,
 .page-banner img {
   width: 100%;
-  height: 100%;
   display: block;
 }
 
 .page-banner img {
-  object-fit: cover;
+  height: auto;
 }
 
 /* Titel */
@@ -307,10 +303,7 @@ a:hover {
 
 @media (max-width: 767px) {
 
-  .page-banner {
-    height: 220px;
-  }
-
+  
   .banner-title {
     left: 20px;
     bottom: 20px;
