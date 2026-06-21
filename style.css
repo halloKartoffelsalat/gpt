@@ -309,7 +309,12 @@ a:hover {
     bottom: 20px;
   }
 
-  .vision-image {
+   .banner-title h1 {
+    font-size: 1.8rem;
+  }
+}
+
+ .vision-image {
   margin: 40px 0;
 }
 
@@ -317,11 +322,6 @@ a:hover {
   width: 100%;
   display: block;
   border-radius: 8px;
-}
-
-  .banner-title h1 {
-    font-size: 1.8rem;
-  }
 }
 
 .image-caption {
