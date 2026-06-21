@@ -324,9 +324,20 @@ a:hover {
   border-radius: 8px;
 }
 
+.content-photo {
+  margin: 50px auto;
+  max-width: 650px;
+}
+
+.content-photo img {
+  width: 100%;
+  display: block;
+}
+
 .image-caption {
   margin-top: 8px;
   font-size: 0.9rem;
   color: #666;
   text-align: center;
 }
+
