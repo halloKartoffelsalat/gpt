@@ -323,3 +323,10 @@ a:hover {
     font-size: 1.8rem;
   }
 }
+
+.image-caption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
