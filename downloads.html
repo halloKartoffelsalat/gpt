@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <title>Downloads – Bergstraße Eins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="page-banner">
+  <picture>
+    <source 
+      media="(max-width: 767px)"
+      srcset="mauer_mobile.jpg">
+
+    <img 
+      src="mauer_banners.jpg"
+      alt="Bannerbild Das Haus">
+  </picture>
+</div>
+  
+<main class="container">
+
+  <section class="intro">
+    <h1>Downloads</h1>
+   
+
+</main>
+
+<script>
+function loadCalendar() {
+  const container = document.getElementById('calendar-container');
+  const button = document.querySelector('.btn');
+
+  container.innerHTML = `
+    <iframe 
+      src="https://calendar.google.com/calendar/embed?src=kontakt%40bergstrasse-eins.de&ctz=Europe%2FBerlin"
+      style="border: 0; width: 100%; height: 600px;">
+    </iframe>
+  `;
+
+  if (button) {
+    button.style.display = 'none';
+  }
+} 
+    
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav');
+
+burger.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+</script>
+ <div id="footer"></div>
+
+ <script>
+function loadHTML(id, file) {
+  fetch(file)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(id).innerHTML = data;
+
+      // Burger-Menü erst nach Laden aktivieren
+      if (id === "header") {
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
+
+        if (burger && nav) {
+          burger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+          });
+        }
+      }
+    });
+}
+
+// Header & Footer laden
+loadHTML("header", "header.html");
+loadHTML("footer", "footer.html");
+</script>
+
+  
+</body>
+</html>
