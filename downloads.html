@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
   <title>Downloads – Bergstraße Eins</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,97 +16,184 @@
 
 <div class="page-banner">
   <picture>
-    <source 
+    <source
       media="(max-width: 767px)"
       srcset="pictures/grass_mobile.jpg">
 
-    <img 
+    <img
       src="pictures/grass.jpg"
       alt="Bannerbild">
   </picture>
 </div>
-  
+
 <main class="container">
 
-  <section class="intro">
-  <h1>Downloads</h1>
+  <!-- Passwortabfrage -->
 
-  <p>
-    Auf dieser Seite stellen wir verschiedene Unterlagen rund um das
-    Wohnprojekt zur Verfügung. Einige Dokumente richten sich an alle
-    Interessierten, andere enthalten weiterführende Informationen und
-    sind nur für freigeschaltete Personen zugänglich.
-  </p>
+  <div id="login-box">
 
-  <h2>Für Interessenten</h2>
+    <section class="intro">
 
-  <p>
-    Hier finden sich allgemeine Informationen über das Projekt. Das Passwort erhaltet Ihr nach Teilnahme an einem unserer Info-Abende
-  </p>
-    
-    <div class="intro-item">
-    <a href="downloads-interessenten.html" class="btn">Allgemeine Downloads</a>
-    <p>
-      Exposé, Satzung, Grundrisse und weitere allgemeine Informationen
-      rund um unser Wohnprojekt.
-    </p>
+      <h1>Downloads</h1>
+
+      <p>
+        Die Dokumente stehen Interessierten nach Teilnahme an einem unserer
+        Info-Abende zur Verfügung.
+      </p>
+
+      <p>
+        Bitte gib das Zugangspasswort ein.
+      </p>
+
+      <input
+        type="password"
+        id="pw"
+        placeholder="Passwort">
+
+      <br><br>
+
+      <button class="btn" onclick="checkPassword()">
+        Anmelden
+      </button>
+
+      <p id="error"
+         style="display:none;color:#b00020;margin-top:20px;">
+        Das Passwort ist leider nicht korrekt.
+      </p>
+
+    </section>
+
   </div>
 
-  <h2>Erweiterte Unterlagen</h2>
+  <!-- Eigentliche Downloads -->
 
-  <p>
-    Weiterführende Unterlagen für freigeschaltete Interessent:innen.
-      Der Zugang erfolgt über einen persönlichen Zugangscode.
-  </p>
-    
-    <div class="intro-item">
-    <a href="downloads-geschuetzt.html" class="btn">Geschützter Bereich</a>
-    <p>
-      
-    </p>
+  <div id="downloads" style="display:none;">
+
+    <section class="intro">
+
+      <h1>Downloads</h1>
+
+      <p>
+        Auf dieser Seite stellen wir verschiedene Unterlagen rund um das
+        Wohnprojekt zur Verfügung.
+      </p>
+
+      <h2>Für Interessenten</h2>
+
+      <p>
+        Allgemeine Informationen über das Projekt.
+      </p>
+
+      <div class="intro-item">
+        <a
+          href="https://downloads.bergstrasse-eins.de/allgemein.zip"
+          class="btn">
+          Allgemeine Downloads
+        </a>
+
+        <p>
+          Exposé, Satzung, Grundrisse und weitere allgemeine Informationen
+          rund um unser Wohnprojekt.
+        </p>
+      </div>
+
+      <h2>Erweiterte Unterlagen</h2>
+
+      <p>
+        Weiterführende Unterlagen für freigeschaltete Interessent:innen.
+        Der Zugang erfolgt über einen persönlichen Zugangscode.
+      </p>
+
+      <div class="intro-item">
+        <a
+          href="https://downloads.bergstrasse-eins.de/intern.zip"
+          class="btn">
+          Geschützter Bereich
+        </a>
+
+        <p></p>
+      </div>
+
+    </section>
+
   </div>
 
-</section>
 </main>
+
+<div id="footer"></div>
 
 <script>
 
-    
-const burger = document.getElementById('burger');
-const nav = document.getElementById('nav');
+const PASSWORD = "GoetzerBerg108";
 
-burger.addEventListener('click', () => {
-  nav.classList.toggle('open');
+function showDownloads() {
+  document.getElementById("login-box").style.display = "none";
+  document.getElementById("downloads").style.display = "block";
+}
+
+function checkPassword() {
+
+  const pw = document.getElementById("pw").value;
+
+  if (pw === PASSWORD) {
+
+    sessionStorage.setItem("downloads_ok", "true");
+    showDownloads();
+
+  } else {
+
+    document.getElementById("error").style.display = "block";
+
+  }
+
+}
+
+if (sessionStorage.getItem("downloads_ok") === "true") {
+  showDownloads();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const input = document.getElementById("pw");
+
+  input.addEventListener("keydown", function(e) {
+
+    if (e.key === "Enter") {
+      checkPassword();
+    }
+
+  });
+
 });
-</script>
- <div id="footer"></div>
 
- <script>
 function loadHTML(id, file) {
   fetch(file)
     .then(response => response.text())
     .then(data => {
       document.getElementById(id).innerHTML = data;
 
-      // Burger-Menü erst nach Laden aktivieren
       if (id === "header") {
+
         const burger = document.getElementById('burger');
         const nav = document.getElementById('nav');
 
         if (burger && nav) {
+
           burger.addEventListener('click', () => {
             nav.classList.toggle('open');
           });
+
         }
+
       }
+
     });
 }
 
-// Header & Footer laden
 loadHTML("header", "header.html");
 loadHTML("footer", "footer.html");
+
 </script>
 
-  
 </body>
 </html>
