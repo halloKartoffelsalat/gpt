@@ -37,9 +37,11 @@
       <h1>Downloads</h1>
 
       <p>
-        Liebe Interessent:innen, <br>
-        hier stellen wir euch diverse Infomaterialien zur verfügung, die euch einen noch tieferen Einblick ins Projekt verschaffen.
-        Den Zugangscode erhaltet ihr nach einmaliger Teilnahme an einem unserer Infoabende.
+        Liebe Interessent:innen,<br>
+        hier stellen wir euch verschiedene Unterlagen zur Verfügung, die euch
+        einen tieferen Einblick in unser Wohnprojekt verschaffen.
+        Den Zugangscode erhaltet ihr nach einmaliger Teilnahme an einem unserer
+        Infoabende.
       </p>
 
       <p>
@@ -66,7 +68,7 @@
 
   </div>
 
-  <!-- Eigentliche Downloads -->
+  <!-- Downloads -->
 
   <div id="downloads" style="display:none;">
 
@@ -75,44 +77,66 @@
       <h1>Downloads</h1>
 
       <p>
-        Auf dieser Seite stellen wir verschiedene Unterlagen rund um das
+        Auf dieser Seite stellen wir verschiedene Unterlagen rund um unser
         Wohnprojekt zur Verfügung.
       </p>
 
-      <h2>Für Interessenten</h2>
+      <div class="download-grid">
 
-      <p>
-        Allgemeine Informationen über das Projekt.
-      </p>
+        <div class="download-card pdf">
 
-      <div class="intro-item">
-        <a
-          href="https://downloads.bergstrasse-eins.de/allgemein/Level1.zip"
-          class="btn">
-          Allgemeine Downloads
-        </a>
+          <h2>Satzung der Ländlich Wohnen eG</h2>
 
-        <p>
-          Exposé, Satzung, Grundrisse und weitere allgemeine Informationen
-          rund um unser Wohnprojekt.
-        </p>
-      </div>
+          <p>
+            Die Satzung regelt die Grundlagen der Genossenschaft, ihre Organe,
+            die Rechte und Pflichten der Mitglieder sowie die wesentlichen
+            organisatorischen Rahmenbedingungen.
+          </p>
 
-      <h2>Erweiterte Unterlagen</h2>
+          <a
+            href="downloads/Satzung_Laendlich_Wohnen_eG.pdf"
+            class="btn">
+            PDF herunterladen
+          </a>
 
-      <p>
-        Weiterführende Unterlagen für freigeschaltete Interessent:innen.
-        Der Zugang erfolgt über einen persönlichen Zugangscode.
-      </p>
+        </div>
 
-      <div class="intro-item">
-        <a
-          href="https://downloads.bergstrasse-eins.de/intern/Level2.zip"
-          class="btn">
-          Geschützter Bereich
-        </a>
+        <div class="download-card pdf">
 
-        <p></p>
+          <h2>Geschäftsordnung</h2>
+
+          <p>
+            Die Geschäftsordnung enthält Regelungen zur Organisation unseres
+            Wohnprojekts sowie zur Zusammenarbeit innerhalb der Gemeinschaft.
+          </p>
+
+          <a
+            href="downloads/Geschaeftsordnung.pdf"
+            class="btn">
+            PDF herunterladen
+          </a>
+
+        </div>
+
+        <div class="download-card zip">
+
+          <h2>Weiterführende Unterlagen</h2>
+
+          <p>
+            Weiterführende Dokumente, beispielsweise zur Finanzplanung oder zu
+            internen Arbeitsständen des Projekts, stehen als ZIP-Archiv zur
+            Verfügung. Der Zugriff wird interessierten Personen im Laufe des
+            persönlichen Kennenlernprozesses freigeschaltet.
+          </p>
+
+          <a
+            href="https://downloads.bergstrasse-eins.de/intern/Level2.zip"
+            class="btn">
+            ZIP-Archiv herunterladen
+          </a>
+
+        </div>
+
       </div>
 
     </section>
@@ -175,13 +199,13 @@ function loadHTML(id, file) {
 
       if (id === "header") {
 
-        const burger = document.getElementById('burger');
-        const nav = document.getElementById('nav');
+        const burger = document.getElementById("burger");
+        const nav = document.getElementById("nav");
 
         if (burger && nav) {
 
-          burger.addEventListener('click', () => {
-            nav.classList.toggle('open');
+          burger.addEventListener("click", () => {
+            nav.classList.toggle("open");
           });
 
         }
