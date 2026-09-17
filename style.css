@@ -400,6 +400,7 @@ a:hover {
     display: block;
     margin: 0 auto 20px auto;
 }
+
 @media (max-width: 767px) {
     .bewohnerbild {
         width: 160px;
