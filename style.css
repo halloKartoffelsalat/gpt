@@ -387,3 +387,21 @@ a:hover {
 .download-card .btn {
     margin-top: 0;
 }
+
+/* =========================
+   Layout Bewohnerbilder Quotes
+========================= */
+.bewohnerbild {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+}
+@media (max-width: 767px) {
+    .bewohnerbild {
+        width: 160px;
+        height: 160px;
+    }
+}
