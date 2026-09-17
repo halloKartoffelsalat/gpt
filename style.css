@@ -398,6 +398,7 @@ a:hover {
     object-fit: cover;
     object-position: center 25%;
     display: block;
+    margin: 0 auto 20px auto;
 }
 @media (max-width: 767px) {
     .bewohnerbild {
