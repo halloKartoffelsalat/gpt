@@ -180,12 +180,12 @@ a:hover {
 
 .intro-item .btn {
   display: grid;
-  grid-template-columns: 42px 1fr;
+  grid-template-columns: 55px 1fr;
   align-items: center;
   width: 250px;
   min-height: 48px;
   box-sizing: border-box;
-  padding: 0 18px 0 10px;
+  padding: 0 18px 0 8px;
   text-align: left;
 }
 
@@ -193,11 +193,10 @@ a:hover {
   width: 21px;
   height: 21px;
   justify-self: center;
-  flex-shrink: 0;
 }
 
 .intro-item .btn span {
-  padding-left: 12px;
+  padding-left: 16px;
 }
 /* Text leicht kompakter */
 .intro-item p {
