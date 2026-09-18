@@ -178,6 +178,12 @@ a:hover {
   gap: 24px;
 }
 
+.intro-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .intro-item .btn {
   display: grid;
   grid-template-columns: 55px 1fr;
@@ -198,19 +204,13 @@ a:hover {
 .intro-item .btn span {
   padding-left: 16px;
 }
+
 /* Text leicht kompakter */
 .intro-item p {
   margin-top: 8px;
   font-size: 0.95rem;
   opacity: 0.85;
   max-width: 480px;
-}
-
-.intro-item .btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 220px;
 }
 
 /* Desktop */
@@ -226,7 +226,7 @@ a:hover {
   }
 }
 
-/* buttons mobil zentrieren */
+/* Mobil */
 @media (max-width: 767px) {
   .intro-item {
     align-items: center;
@@ -234,7 +234,7 @@ a:hover {
   }
 
   .intro-item .btn {
-    width: 220px;
+    width: 250px;
   }
 }
 
