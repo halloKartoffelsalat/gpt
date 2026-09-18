@@ -179,19 +179,26 @@ a:hover {
 }
 
 .intro-item .btn {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: 42px 1fr;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 220px;
+  width: 250px;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 0 18px 0 10px;
+  text-align: left;
 }
 
 .intro-item .btn svg {
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
+  justify-self: center;
   flex-shrink: 0;
 }
 
+.intro-item .btn span {
+  padding-left: 12px;
+}
 /* Text leicht kompakter */
 .intro-item p {
   margin-top: 8px;
