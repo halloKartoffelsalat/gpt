@@ -276,15 +276,19 @@ a:hover {
   position: relative;
 }
 
-.page-banner picture,
-.page-banner img {
+.page-banner picture {
   width: 100%;
   display: block;
 }
 
-.page-banner img {
+.page-banner picture img {
+  width: 100%;
   height: auto;
+  display: block;
 }
+
+
+/* Kreis */
 
 .banner-kreis {
   position: absolute;
@@ -294,7 +298,9 @@ a:hover {
   top: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.7;
+  z-index: 2;
 }
+
 
 /* Titel */
 
@@ -310,11 +316,6 @@ a:hover {
   text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
-.banner-title h1 {
-  color: white;
-  margin: 0;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
 
 /* Mobile */
 
