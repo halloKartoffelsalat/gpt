@@ -273,6 +273,7 @@ a:hover {
 
 .page-banner {
   width: 100%;
+  position: relative;
 }
 
 .page-banner picture,
