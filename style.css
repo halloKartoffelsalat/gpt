@@ -286,6 +286,16 @@ a:hover {
   height: auto;
 }
 
+.banner-kreis {
+  position: absolute;
+  width: 45%;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+}
+
 /* Titel */
 
 .banner-title {
