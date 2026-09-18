@@ -305,7 +305,7 @@ a:hover {
   height: 80%;
   width: auto;
 
-  left: 4%;
+  left: 15%;
   top: 63%;
 
   transform: translate(-50%, -50%);
@@ -319,7 +319,7 @@ a:hover {
 .banner-title {
   position: absolute;
 
-  left: 4%;
+  left: 15%;
   top: 63%;
 
   transform: translate(-50%, -50%);
