@@ -82,14 +82,21 @@ async function loadNews() {
       return;
     }
 
-    news.forEach(article => {
+ news.forEach(article => {
 
   const articleElement = document.createElement("article");
   articleElement.className = "news-entry";
 
+  const contentElement = document.createElement("div");
+  contentElement.className = "news-content";
+
   const date = document.createElement("p");
   date.textContent =
-    new Date(article.datum).toLocaleDateString("de-DE");
+    new Date(article.datum).toLocaleDateString("de-DE", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric"
+    });
   date.className = "news-date";
 
   const title = document.createElement("h2");
@@ -99,22 +106,23 @@ async function loadNews() {
   text.textContent = article.text;
   text.className = "news-text";
 
-  articleElement.appendChild(date);
-  articleElement.appendChild(title);
+  contentElement.appendChild(date);
+  contentElement.appendChild(title);
+  contentElement.appendChild(text);
 
-if (article.bild && article.bild.length > 0) {
-  const image = document.createElement("img");
+  articleElement.appendChild(contentElement);
 
-  image.src = article.bild[0].url;
-  image.alt = article.titel;
-  image.className = "news-image";
+  if (article.bild && article.bild.length > 0) {
+    const image = document.createElement("img");
 
-  articleElement.appendChild(image);
-}
+    image.src = article.bild[0].url;
+    image.alt = article.titel;
+    image.className = "news-image";
 
-articleElement.appendChild(text);
+    articleElement.appendChild(image);
+  }
 
-newsList.appendChild(articleElement);
+  newsList.appendChild(articleElement);
 });
     
   } catch (error) {
