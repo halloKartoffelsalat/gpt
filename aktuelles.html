@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
   <title>TITEL – Bergstraße Eins</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -27,53 +27,116 @@
       alt="Bannerbild Das Haus">
   </picture>
 
- <div class="banner-overlay">
+  <div class="banner-overlay">
 
-  <div class="banner-kreis-container">
+    <div class="banner-kreis-container">
 
-    <img
-      class="banner-kreis"
-      src="pictures/circle500.png"
-      alt="">
+      <img
+        class="banner-kreis"
+        src="pictures/circle500.png"
+        alt="">
 
-    <h1 class="banner-title">Aktuelles</h1>
+      <h1 class="banner-title">Aktuelles</h1>
 
     </div>
   </div>
 </div>
-  
+
 <main class="container">
 
   <h1>Was gibt's Neues?</h1>
 
+  <p>
+    Hier informieren wir über alles, worüber es sich zu sprechen lohnt
+  </p>
 
-
-<p>
-  Hier informieren wir über alles, worüber es sich zu sprechen lohnt
-</p>
-
-
+  <div id="news-list"></div>
 
 </main>
 
 <!-- Footer wird geladen -->
 <div id="footer"></div>
 
+
+<!-- News aus Airtable laden -->
+<script>
+async function loadNews() {
+  const newsList = document.getElementById("news-list");
+
+  try {
+    const response = await fetch(
+      "https://bergstrasse-news-api.sebastian-habermann.workers.dev"
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP-Fehler: ${response.status}`);
+    }
+
+    const news = await response.json();
+
+    newsList.innerHTML = "";
+
+    if (news.length === 0) {
+      newsList.innerHTML =
+        "<p>Zurzeit gibt es keine Neuigkeiten.</p>";
+      return;
+    }
+
+    news.forEach(article => {
+
+      const articleElement = document.createElement("article");
+
+      const title = document.createElement("h2");
+      title.textContent = article.titel;
+
+      const date = document.createElement("p");
+      date.textContent =
+        new Date(article.datum).toLocaleDateString("de-DE");
+      date.className = "news-date";
+
+      const text = document.createElement("p");
+      text.textContent = article.text;
+
+      articleElement.appendChild(title);
+      articleElement.appendChild(date);
+      articleElement.appendChild(text);
+
+      newsList.appendChild(articleElement);
+    });
+
+  } catch (error) {
+
+    console.error("Fehler beim Laden der News:", error);
+
+    newsList.innerHTML =
+      "<p>Die Neuigkeiten konnten momentan nicht geladen werden.</p>";
+  }
+}
+
+loadNews();
+</script>
+
+
+<!-- Header und Footer laden -->
 <script>
 function loadHTML(id, file) {
   fetch(file)
     .then(response => response.text())
     .then(data => {
+
       document.getElementById(id).innerHTML = data;
 
       if (id === "header") {
+
         const burger = document.getElementById('burger');
         const nav = document.getElementById('nav');
 
         if (burger && nav) {
+
           burger.addEventListener('click', () => {
             nav.classList.toggle('open');
           });
+
         }
       }
     });
