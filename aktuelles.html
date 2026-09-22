@@ -92,11 +92,13 @@ async function loadNews() {
 
   const date = document.createElement("p");
   date.textContent =
-    new Date(article.datum).toLocaleDateString("de-DE", {
+  new Date(article.datum)
+    .toLocaleDateString("de-DE", {
       day: "2-digit",
       month: "long",
       year: "numeric"
-    });
+    })
+    .toUpperCase();
   date.className = "news-date";
 
   const title = document.createElement("h2");
