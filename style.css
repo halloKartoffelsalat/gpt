@@ -548,8 +548,7 @@ a:hover {
 
 .news-content {
   min-width: 0;
-  align-self: center;
-  padding-top: 0.5rem;
+  align-self: start;
 }
 
 .news-entry h2 {
