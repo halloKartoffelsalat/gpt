@@ -549,6 +549,7 @@ a:hover {
 .news-content {
   min-width: 0;
   align-self: center;
+  padding-top: 0.5rem;
 }
 
 .news-entry h2 {
@@ -557,7 +558,7 @@ a:hover {
 }
 
 .news-date {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.7rem 0;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   opacity: 0.6;
