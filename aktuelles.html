@@ -118,6 +118,7 @@ async function loadNews() {
     image.src = article.bild[0].url;
     image.alt = article.titel;
     image.className = "news-image";
+    image.loading = "lazy";
 
     articleElement.appendChild(image);
   }
