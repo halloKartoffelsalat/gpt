@@ -101,9 +101,20 @@ async function loadNews() {
 
   articleElement.appendChild(date);
   articleElement.appendChild(title);
-  articleElement.appendChild(text);
 
-  newsList.appendChild(articleElement);
+if (article.bild && article.bild.length > 0) {
+  const image = document.createElement("img");
+
+  image.src = article.bild[0].url;
+  image.alt = article.titel;
+  image.className = "news-image";
+
+  articleElement.appendChild(image);
+}
+
+articleElement.appendChild(text);
+
+newsList.appendChild(articleElement);
 });
     
   } catch (error) {
