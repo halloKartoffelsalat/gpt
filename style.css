@@ -510,3 +510,37 @@ a:hover {
         height: 160px;
     }
 }
+
+
+/* =========================
+   News
+========================= */
+
+#news-list {
+  margin-top: 2.5rem;
+}
+
+.news-entry {
+  padding: 0 0 2rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.news-entry:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+
+.news-entry h2 {
+  margin: 0 0 0.8rem 0;
+}
+
+.news-text {
+  margin: 0;
+  line-height: 1.6;
+}
