@@ -86,20 +86,26 @@ async function loadNews() {
 
       const articleElement = document.createElement("article");
 
-      const title = document.createElement("h2");
-      title.textContent = article.titel;
+      const articleElement = document.createElement("article");
+articleElement.className = "news-entry";
 
-      const date = document.createElement("p");
-      date.textContent =
-        new Date(article.datum).toLocaleDateString("de-DE");
-      date.className = "news-date";
+const date = document.createElement("p");
+date.textContent =
+  new Date(article.datum).toLocaleDateString("de-DE");
+date.className = "news-date";
 
-      const text = document.createElement("p");
-      text.textContent = article.text;
+const title = document.createElement("h2");
+title.textContent = article.titel;
 
-      articleElement.appendChild(title);
-      articleElement.appendChild(date);
-      articleElement.appendChild(text);
+const text = document.createElement("p");
+text.textContent = article.text;
+text.className = "news-text";
+
+articleElement.appendChild(date);
+articleElement.appendChild(title);
+articleElement.appendChild(text);
+
+newsList.appendChild(articleElement);
 
       newsList.appendChild(articleElement);
     });
