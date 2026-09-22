@@ -106,8 +106,8 @@ async function loadNews() {
   text.textContent = article.text;
   text.className = "news-text";
 
-  contentElement.appendChild(date);
   contentElement.appendChild(title);
+  contentElement.appendChild(date);
   contentElement.appendChild(text);
 
   articleElement.appendChild(contentElement);
