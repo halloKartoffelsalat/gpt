@@ -2,10 +2,10 @@
 
 body {
   margin: 0;
-  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium',
-                 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  font-family: Superclarendon, 'Bookman Old Style', 'URW Bookman',
+               'URW Bookman L', 'Georgia Pro', Georgia, serif;
   background: #f6f4f1;
-  color: #292929;
+  color: #2b2b2b;
   line-height: 1.6;
   font-weight: 400;
 }
