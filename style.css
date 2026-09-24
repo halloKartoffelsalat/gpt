@@ -5,7 +5,8 @@ body {
   font-family: Verdana, sans-serif;
   background: #f6f4f1;
   color: #2b2b2b;
-  line-height: 1.6;
+  line-height: 1.68;
+  font-weight: 400;
 }
 
 /* Container */
