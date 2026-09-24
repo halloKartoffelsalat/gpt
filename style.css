@@ -2,10 +2,12 @@
 
 body {
   margin: 0;
+  font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium',
+                 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   font-family: Trebuchet MS, sans-serif;
   background: #f6f4f1;
   color: #292929;
-  line-height: 1.68;
+  line-height: 1.6;
   font-weight: 400;
 }
 
