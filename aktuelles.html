@@ -82,7 +82,7 @@ async function loadNews() {
       return;
     }
 
- news.forEach(article => {
+news.forEach((article, index) => {
 
   const articleElement = document.createElement("article");
   articleElement.className = "news-entry";
@@ -92,13 +92,14 @@ async function loadNews() {
 
   const date = document.createElement("p");
   date.textContent =
-  new Date(article.datum)
-    .toLocaleDateString("de-DE", {
-      day: "2-digit",
-      month: "long",
-      year: "numeric"
-    })
-    .toUpperCase();
+    new Date(article.datum)
+      .toLocaleDateString("de-DE", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+      })
+      .toUpperCase();
+
   date.className = "news-date";
 
   const title = document.createElement("h2");
@@ -126,14 +127,14 @@ async function loadNews() {
   }
 
   newsList.appendChild(articleElement);
- 
-   // Trenner zwischen den News
-      if (index < news.length - 1) {
-        const divider = document.createElement("div");
-        divider.className = "news-divider";
-        newsList.appendChild(divider);
-      }
-    });
+
+  // Trenner zwischen den News
+  if (index < news.length - 1) {
+    const divider = document.createElement("div");
+    divider.className = "news-divider";
+    newsList.appendChild(divider);
+  }
+});
     
   } catch (error) {
 
