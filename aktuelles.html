@@ -126,7 +126,14 @@ async function loadNews() {
   }
 
   newsList.appendChild(articleElement);
-});
+ 
+   // Trenner zwischen den News
+      if (index < news.length - 1) {
+        const divider = document.createElement("div");
+        divider.className = "news-divider";
+        newsList.appendChild(divider);
+      }
+    });
     
   } catch (error) {
 
