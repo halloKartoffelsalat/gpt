@@ -640,3 +640,34 @@ a:hover {
   }
 
 }
+
+/* =========================
+   News-Divider
+========================= */
+.news-divider {
+  position: relative;
+  width: 4px;
+  height: 4px;
+  margin: 30px auto;
+  background: #f29417;
+  border-radius: 50%;
+}
+
+.news-divider::before,
+.news-divider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  background: #f29417;
+  border-radius: 50%;
+}
+
+.news-divider::before {
+  left: -14px;
+}
+
+.news-divider::after {
+  left: 14px;
+}
