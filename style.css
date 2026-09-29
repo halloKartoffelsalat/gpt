@@ -741,3 +741,11 @@ a:hover {
         font-size: 22px;
     }
 }
+
+/* Instagram im Footer */
+
+.instagram-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
