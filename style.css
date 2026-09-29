@@ -73,6 +73,39 @@ body {
     color: #65cf91;
 }
 
+/* Footer */
+
+.footer {
+  margin-top: 60px;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #2b2b2b;
+  opacity: 0.7;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
 /* Burger */
 
 .burger {
@@ -176,48 +209,25 @@ a:hover {
 
 @media (min-width: 768px) {
 
-  .container {
-    max-width: 900px;
-  }
+    .container {
+      max-width: 900px;
+    }
 
-  .nav {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
+    .nav {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
 
-  .burger {
+    .burger {
     display: none;
-  }
+    }
 
-  .footer {
-  margin-top: 60px;
-  padding: 20px 0;
-  border-top: 1px solid #ddd;
-  font-size: 0.9rem;
+    #impressum p {
+    margin-bottom: 8px;
+    }
 }
 
-.footer-inner {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.footer a {
-  text-decoration: none;
-  color: #2b2b2b;
-  opacity: 0.7;
-}
-
-.footer a:hover {
-  opacity: 1;
-}
-
-  #impressum p {
-  margin-bottom: 8px;
-}
-
-}
 
 /* ========================= */
 /* Startseite Erweiterungen  */
@@ -740,12 +750,4 @@ a:hover {
         bottom: 15px;
         font-size: 22px;
     }
-}
-
-/* Instagram im Footer */
-
-.instagram-icon {
-    width: 20px;
-    height: 20px;
-    display: block;
 }
