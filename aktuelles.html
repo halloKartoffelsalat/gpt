@@ -178,5 +178,30 @@ loadHTML("header", "header.html");
 loadHTML("footer", "footer.html");
 </script>
 
+  
+<!-- back to top -->
+  <button id="back-to-top" aria-label="Nach oben">
+    ↑
+</button>
+ <script>
+const backToTop = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTop.classList.add("visible");
+    } else {
+        backToTop.classList.remove("visible");
+    }
+});
+
+backToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+ <!-- ende back to top -->  
+  
 </body>
 </html>
