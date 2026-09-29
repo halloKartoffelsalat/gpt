@@ -682,3 +682,57 @@ a:hover {
 .news-divider::after {
   left: 14px;
 }
+
+/* =========================
+   nach-oben-button
+========================= */
+#back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+    background-color: #65cf91;
+    color: white;
+
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: opacity 0.25s ease,
+                visibility 0.25s ease,
+                transform 0.25s ease;
+
+    z-index: 1000;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background-color: #55bd80;
+}
+
+@media (max-width: 600px) {
+    #back-to-top {
+        width: 44px;
+        height: 44px;
+        right: 15px;
+        bottom: 15px;
+        font-size: 22px;
+    }
+}
