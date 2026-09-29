@@ -751,3 +751,25 @@ a:hover {
         font-size: 22px;
     }
 }
+
+/* Instagram-Hinweis auf der Mitmachen-Seite */
+
+.instagram-cta {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.instagram-cta h2 {
+    text-align: center;
+}
+
+.instagram-cta p {
+    text-align: center;
+}
+
+.instagram-cta-icon {
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin: 20px auto 0;
+}
